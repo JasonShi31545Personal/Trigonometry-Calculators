@@ -12,6 +12,7 @@
 		3EA0E37B23ED8C3500C63823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0E37A23ED8C3500C63823 /* Assets.xcassets */; };
 		3EA0E37E23ED8C3500C63823 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0E37D23ED8C3500C63823 /* Preview Assets.xcassets */; };
 		3EA0E38123ED8C3500C63823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0E37F23ED8C3500C63823 /* Main.storyboard */; };
+		3EA0E38A23ED9B1C00C63823 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0E38923ED9B1C00C63823 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3EA0E38023ED8C3500C63823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EA0E38223ED8C3500C63823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA0E38323ED8C3500C63823 /* Trigonometry_Calculators.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trigonometry_Calculators.entitlements; sourceTree = "<group>"; };
+		3EA0E38923ED9B1C00C63823 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				3EA0E37623ED8C3300C63823 /* AppDelegate.swift */,
 				3EA0E37823ED8C3300C63823 /* ContentView.swift */,
+				3EA0E38923ED9B1C00C63823 /* Model.swift */,
 				3EA0E37A23ED8C3500C63823 /* Assets.xcassets */,
 				3EA0E37F23ED8C3500C63823 /* Main.storyboard */,
 				3EA0E38223ED8C3500C63823 /* Info.plist */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA0E38A23ED9B1C00C63823 /* Model.swift in Sources */,
 				3EA0E37923ED8C3300C63823 /* ContentView.swift in Sources */,
 				3EA0E37723ED8C3300C63823 /* AppDelegate.swift in Sources */,
 			);
