@@ -1,22 +1,21 @@
 //
-//  ContentView.swift
+//  MagicHexagonView.swift
 //  Trigonometry Calculators
 //
-//  Created by my_computer on 2/7/20.
+//  Created by my_computer on 2/8/20.
 //  Copyright © 2020 my_computer. All rights reserved.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MagicHexagonView: View {
     var body: some View {
         Text("")
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct MagicHexagonView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MagicHexagonView()
     }
 }

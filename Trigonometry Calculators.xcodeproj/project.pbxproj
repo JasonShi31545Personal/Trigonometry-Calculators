@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6CB36123EFA7D000641ADF /* MagicHexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CB36023EFA7D000641ADF /* MagicHexagonView.swift */; };
 		3EA0E37723ED8C3300C63823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0E37623ED8C3300C63823 /* AppDelegate.swift */; };
 		3EA0E37923ED8C3300C63823 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0E37823ED8C3300C63823 /* ContentView.swift */; };
 		3EA0E37B23ED8C3500C63823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0E37A23ED8C3500C63823 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E6CB36023EFA7D000641ADF /* MagicHexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicHexagonView.swift; sourceTree = "<group>"; };
 		3EA0E37323ED8C3300C63823 /* Trigonometry Calculators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trigonometry Calculators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0E37623ED8C3300C63823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA0E37823ED8C3300C63823 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				3EA0E37623ED8C3300C63823 /* AppDelegate.swift */,
 				3EA0E37823ED8C3300C63823 /* ContentView.swift */,
+				3E6CB36023EFA7D000641ADF /* MagicHexagonView.swift */,
 				3EA0E38923ED9B1C00C63823 /* Model.swift */,
 				3EA0E37A23ED8C3500C63823 /* Assets.xcassets */,
 				3EA0E37F23ED8C3500C63823 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 				3EA0E38A23ED9B1C00C63823 /* Model.swift in Sources */,
 				3EA0E37923ED8C3300C63823 /* ContentView.swift in Sources */,
 				3EA0E37723ED8C3300C63823 /* AppDelegate.swift in Sources */,
+				3E6CB36123EFA7D000641ADF /* MagicHexagonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
