@@ -9,9 +9,17 @@
 import SwiftUI
 
 struct MagicHexagonView: View {
-    var body: some View {
-        Text("")
+    
+    var path = NSBezierPath()
+    
+    private func setUpPath() {
+        path.line(to: NSPoint(x: -10, y: 0))
     }
+    
+    var body: some View {
+        Text("s")
+    }
+    static var shared = MagicHexagonView()
 }
 
 struct MagicHexagonView_Previews: PreviewProvider {

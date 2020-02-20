@@ -14,8 +14,8 @@ struct Calculator {
     enum Functions: Int {
         case tan, sin, cos, cot, sec, csc, tanh, cosh, sinh, coth
     }
-    static var modeInRadians: Bool = true
-    static func calulate(function: Functions, operand: Double) -> Double {
+    @State var modeInRadians: Bool = true
+    func calulate(function: Functions, operand: Double) -> Double {
         switch function {
         case .tan: return tan(operand)
         case .sin: return sin(operand)
@@ -29,5 +29,5 @@ struct Calculator {
         case .coth: return (1/tanh(operand))
         }
     }
-    
+    static var shared = Calculator()
 }
