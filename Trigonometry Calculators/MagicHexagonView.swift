@@ -8,16 +8,30 @@
 
 import SwiftUI
 
+fileprivate var points = [
+    CGPoint(x: 0, y: 20),
+    CGPoint(x: 20, y: 40),
+    CGPoint(x: 40, y: 40),
+    CGPoint(x: 60, y: 20),
+    CGPoint(x: 40, y: 0),
+    CGPoint(x: 20, y: 0)
+]
+
 struct MagicHexagonView: View {
     
-    var path = NSBezierPath()
-    
-    private func setUpPath() {
-        path.line(to: NSPoint(x: -10, y: 0))
+    private func setUpPath() -> Path {
+        Path { path in
+            path.addLines(points)
+        }
     }
-    
+        
     var body: some View {
-        Text("s")
+        ZStack {
+            Text("1")
+            setUpPath()
+                .aspectRatio(1, contentMode: .fit)
+                .padding()
+        }
     }
     static var shared = MagicHexagonView()
 }
@@ -27,3 +41,4 @@ struct MagicHexagonView_Previews: PreviewProvider {
         MagicHexagonView()
     }
 }
+

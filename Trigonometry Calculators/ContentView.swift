@@ -18,9 +18,9 @@ struct ContentView: View {
             TextField(.init("Input Real Numbers"), text: $operand)
                 .frame(maxWidth: 300)
                 .padding()
-            Picker(selection: .constant(1), label: Text("")) {
-                Text("Radians").tag(1)
-                Text("Degrees").tag(2)
+            Picker(selection: Calculator.shared.$modeInRadians, label: Text("")) {
+                Text("Radians").tag(true)
+                Text("Degrees").tag(false)
             }
             .frame(maxWidth: 200)
             Button(action: {
