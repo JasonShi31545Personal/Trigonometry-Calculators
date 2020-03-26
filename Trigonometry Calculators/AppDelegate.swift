@@ -27,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.center()
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
-        window.toolbar = NSToolbar()
+        window.titlebarAppearsTransparent = true
         window.title = "Trigonometry Calculator"
         window.makeKeyAndOrderFront(nil)
     }
