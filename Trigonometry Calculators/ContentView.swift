@@ -10,42 +10,41 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var operand = ""
-    @State var result: String = ""
+    @State var result: Double = 0.0
+    @State var operand: String = Calculator.shared.operand
+    @State var modeInRadians = Calculator.shared.modeInRadians
+    @State var isPresented = false
+    
     var body: some View {
         VStack {
-            MagicHexagonView.shared
+            MagicHexagonView.shared.padding([.top])
             TextField(.init("Input Real Numbers"), text: $operand)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: 300)
                 .padding()
-            Picker(selection: Calculator.shared.$modeInRadians, label: Text("")) {
+            Picker(selection: $modeInRadians, label: Text("")) {
                 Text("Radians").tag(true)
                 Text("Degrees").tag(false)
             }
+            .pickerStyle(RadioGroupPickerStyle())
             .frame(maxWidth: 200)
             Button(action: {
-                self.result = String(Calculator.shared.calulate(function: .cos, operand: Double(self.operand) ?? 0.0))
+                self.result = Calculator.shared.calulate(Double(self.operand) ?? 0.0, self.modeInRadians)
+                History.default.historyData.append(self.result)
             }) {
                 Text("Calculate")
             }
-            Text(result)
-            HStack {
-                Button(action: {
-                    let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 500, height: 500), styleMask: [.closable, .titled, .miniaturizable, .unifiedTitleAndToolbar], backing: .buffered, defer: true)
-                    window.contentView = NSHostingView(rootView: HistoryView.shared)
-                    window.center()
-                    window.display()
-                    window.makeKeyAndOrderFront(nil)
-                }) {
-                    Text("History")
-                }
-                Button(action: {
-                    NSLog("c")
-                }) {
-                    Text("Clear")
-                }
-
+            .padding()
+            Text("Result: " + String(result))
+            Text("Rounded Result: " + String(result.rounded(.toNearestOrAwayFromZero)))
+            Button(action: {
+                self.isPresented = true
+            }) {
+                Text("        History        ")
             }
+            .popover(isPresented: self.$isPresented, content: {HistoryView()})
+            .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -54,6 +53,13 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView().environment(\.colorScheme, .light)
+            ContentView().environment(\.controlSize, .mini)
+            ContentView().environment(\.font, .largeTitle)
+            ContentView().environment(\.layoutDirection, .rightToLeft)
+            ContentView().environment(\.legibilityWeight, .bold)
+        }
     }
 }
