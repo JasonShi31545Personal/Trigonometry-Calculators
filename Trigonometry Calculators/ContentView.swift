@@ -36,7 +36,7 @@ struct ContentView: View {
                 Text("Calculate")
             }
             .padding()
-            Text("Result: " + String(result))
+            Text("Computerized Result: " + String(result))
             Text("Rounded Result: " + String(result.rounded(.toNearestOrAwayFromZero)))
             Button(action: {
                 self.isPresented = true
@@ -56,6 +56,7 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
             ContentView().environment(\.colorScheme, .light)
+            ContentView().environment(\.colorScheme, .dark)
             ContentView().environment(\.controlSize, .mini)
             ContentView().environment(\.font, .largeTitle)
             ContentView().environment(\.layoutDirection, .rightToLeft)
